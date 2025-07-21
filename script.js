@@ -5,34 +5,25 @@ const user = {
   premium: true,
 };
 
-// Додаємо поле mood
-user.mood = 'happy';
+user.mood = "happy";
 
-// Змінюємо hobby
-user.hobby = 'skydiving';
+user.hobby = "skydiving";
 
-// Змінюємо premium
 user.premium = false;
 
-// Виводимо ключі та значення
 for (const key of Object.keys(user)) {
   console.log(`${key}: ${user[key]}`);
 }
-
-
 
 function countProps(obj) {
   return Object.keys(obj).length;
 }
 
-// Перевірка
-console.log(countProps({ name: "Alice", age: 25 })); // 2
-console.log(countProps({}));                         // 0
-
-
+console.log(countProps({ name: "Alice", age: 25 }));
+console.log(countProps({}));
 
 function findBestEmployee(employees) {
-  let bestName = '';
+  let bestName = "";
   let maxTasks = 0;
 
   for (const name in employees) {
@@ -45,7 +36,6 @@ function findBestEmployee(employees) {
   return bestName;
 }
 
-// Перевірка
 const team = {
   Ann: 29,
   David: 35,
@@ -53,9 +43,7 @@ const team = {
   Lorence: 99,
 };
 
-console.log(findBestEmployee(team)); // Lorence
-  
-
+console.log(findBestEmployee(team));
 
 function countTotalSalary(employees) {
   let total = 0;
@@ -67,14 +55,13 @@ function countTotalSalary(employees) {
   return total;
 }
 
-// Перевірка
 const salaries = {
   Mango: 100,
   Poly: 150,
   Alfred: 80,
 };
 
-console.log(countTotalSalary(salaries)); // 330
+console.log(countTotalSalary(salaries));
 
 function getAllPropValues(arr, prop) {
   const result = [];
@@ -88,7 +75,6 @@ function getAllPropValues(arr, prop) {
   return result;
 }
 
-// Перевірка
 const products = [
   { name: "Radar", price: 1300, quantity: 4 },
   { name: "Scanner", price: 2700, quantity: 3 },
@@ -96,14 +82,9 @@ const products = [
   { name: "Grip", price: 1200, quantity: 9 },
 ];
 
-console.log(getAllPropValues(products, "name"));    // ['Radar', 'Scanner', 'Droid', 'Grip']
-console.log(getAllPropValues(products, "quantity")); // [4, 3, 7, 9]
-console.log(getAllPropValues(products, "category")); // []
-
-
-
-
-
+console.log(getAllPropValues(products, "name"));
+console.log(getAllPropValues(products, "quantity"));
+console.log(getAllPropValues(products, "category"));
 
 function calculateTotalPrice(allProducts, productName) {
   for (const product of allProducts) {
@@ -114,7 +95,6 @@ function calculateTotalPrice(allProducts, productName) {
   return 0;
 }
 
-// Перевірка
-console.log(calculateTotalPrice(products, "Radar"));   // 5200
-console.log(calculateTotalPrice(products, "Droid"));   // 2800
-console.log(calculateTotalPrice(products, "Unknown")); // 0
+console.log(calculateTotalPrice(products, "Radar"));
+console.log(calculateTotalPrice(products, "Droid"));
+console.log(calculateTotalPrice(products, "Unknown"));
